@@ -48,7 +48,9 @@ class Home extends Component {
 
     this.setState({
       loading: true,
-    }, async () => {
+    });
+
+    async () => {
       try {
         const posts = await api.posts.getList(this.state.page)
         this.setState({
@@ -62,7 +64,7 @@ class Home extends Component {
           loading: false,
         })
       }
-    })
+    }
   }
 
   render() {
