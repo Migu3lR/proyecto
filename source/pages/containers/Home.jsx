@@ -59,7 +59,7 @@ class Home extends Component {
       } catch (error) {
         console.error(error);
         this.setState({
-          loading: false,
+          loading: false
         })
       }
     })
