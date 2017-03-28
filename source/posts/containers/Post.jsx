@@ -1,9 +1,9 @@
-import React, {Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 import api from '../../api.jsx';
 
 class Post extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -13,11 +13,11 @@ class Post extends Component {
     };
   }
 
-  async componentDidMount(){
-    if(!!this.state.user && !!this.state.comments) return this.setState({ Loading: false });
+  async componentDidMount() {
+    if (!!this.state.user && !!this.state.comments) return this.setState({ loading: false });
 
     const [
-      user, 
+      user,
       comments,
     ] = await Promise.all([
       !this.state.user ? api.users.getSingle(this.props.userId) : Promise.resolve(null),
@@ -49,7 +49,7 @@ class Post extends Component {
               Hay {this.state.comments.length} comentarios
             </span>
           </div>
-          
+
         )}
       </article>
     )
