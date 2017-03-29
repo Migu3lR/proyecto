@@ -5,7 +5,7 @@ import styles from './Header.css';
 
 function Header() {
     return (
-        <header className={styles.className.header}>
+        <header className={styles.header}>
             <h1>
                 Miprimera app cpon react
             </h1>
