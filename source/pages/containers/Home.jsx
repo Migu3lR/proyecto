@@ -42,7 +42,7 @@ class Home extends Component {
     const viewportHeight = window.innerHeight;
     const fullHeight = document.body.clientHeight;
 
-    if (!(scrolled + viewportHeight + 320 >= fullHeight)) {
+    if (!(scrolled + viewportHeight + 300 >= fullHeight)) {
       return null;
     }
 

@@ -29,16 +29,13 @@ module.exports = {
       },
       {
         test: /\.css?$/,
-        use: [
-          {
-            loader: ExtractTextPlugin.extract({ fallback: 'style', use: 'css?modules' })
-          }
-        ]
+        exclude: /node_modules/,
+        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules' })
       }
     ]
   },
   target: 'web',
   plugins: [
-    new ExtractTextPlugin('../statics/styles.css'),
+    new ExtractTextPlugin({ filename: '../statics/styles.css' }),
   ]
 };
