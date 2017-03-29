@@ -6,6 +6,9 @@ function Comment(props) {
       <div>
         By: <a href={`mailto:${props.email}`}> {props.name} </a>
       </div>
+      <p>
+        {props.body}
+      </p>
     </article>
   )
 
