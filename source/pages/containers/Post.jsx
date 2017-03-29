@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import PostBody from '../../posts/containers/Post.jsx';
+import Comment from '../../comments/containers/Comment.jsx';
 import Loading from '../../shared/components/Loading.jsx';
 
-import api  from '../../api.jsx';
+import api from '../../api.jsx';
 
 class Post extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-  
+
     this.state = {
       loading: true,
       user: {},
@@ -24,10 +25,10 @@ class Post extends Component {
     const [
       post,
       comments,
-      ] = await Promise. all([
-          api.posts.getSingle(this.props.match.params.id),
-          api.posts.getComments(this.props.match.params.id),
-          ]);
+    ] = await Promise.all([
+      api.posts.getSingle(this.props.match.params.id),
+      api.posts.getComments(this.props.match.params.id),
+    ]);
 
     const user = await api.users.getSingle(post.user);
 
@@ -43,11 +44,11 @@ class Post extends Component {
 
 
   render() {
-    if (this.state.loading){
+    if (this.state.loading) {
       return <Loading />;
     }
 
-    return(
+    return (
       <section name="post">
 
         <PostBody
@@ -55,6 +56,13 @@ class Post extends Component {
           user={this.state.user}
           comments={this.state.comments}
         />
+        <section>
+          {this.state.comments
+            .map(comment => (
+              <Comment key={comment.id} {...comment} />
+            ))
+          }
+        </section>
 
       </section>
     );
