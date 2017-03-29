@@ -59,7 +59,10 @@ class Post extends Component {
         <section>
           {this.state.comments
             .map(comment => (
-              <Comment key={comment.id} {...comment} />
+              <Comment
+                key={comment.id}
+                {...comment}
+              />
             ))
           }
         </section>
