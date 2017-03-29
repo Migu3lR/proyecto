@@ -23,8 +23,19 @@ module.exports = {
           }
         ],
         exclude: /(node_modules)/
+      },
+      {
+        test: /\.css?$/,
+        use: [
+          {
+            loader: ExtractTextPlugin.extract('style', 'css?modules')
+          }
+        ]
       }
     ]
   },
   target: 'node',
+  plugins: [
+    new ExtractTextPlugin('..statics/styles.css'),
+  ]
 };
