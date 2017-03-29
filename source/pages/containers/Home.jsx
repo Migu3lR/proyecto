@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Post from '../../posts/containers/Post.jsx';
 import Loading from '../../shared/components/Loading.jsx';
+import Header from '../../shared/components/Header.jsx';
 
 import api from '../../api.jsx';
 
@@ -68,6 +69,7 @@ class Home extends Component {
   render() {
     return (
       <section name="Home">
+        <Header />
         <h1> Home </h1>
 
         <section>
