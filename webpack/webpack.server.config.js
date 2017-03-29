@@ -35,6 +35,6 @@ module.exports = {
   },
   target: 'node',
   plugins: [
-    new ExtractTextPlugin({ filename: '../statics/styles.css' }),
+    new ExtractTextPlugin({ filename: '../statics/styles.css' })
   ]
 };
