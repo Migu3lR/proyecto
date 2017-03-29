@@ -30,7 +30,7 @@ module.exports = {
         test: /\.css?$/,
         use: [
           {
-            loader: ExtractTextPlugin.extract('style', 'css?modules')
+            loader: ExtractTextPlugin.extract({ fallback: 'style', use: 'css?modules' })
           }
         ]
       }
@@ -38,6 +38,6 @@ module.exports = {
   },
   target: 'node',
   plugins: [
-    new ExtractTextPlugin('..statics/styles.css'),
+    new ExtractTextPlugin('../statics/styles.css'),
   ]
 };
