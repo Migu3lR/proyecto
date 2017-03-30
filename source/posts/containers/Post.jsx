@@ -13,7 +13,7 @@ class Post extends Component {
       user: props.user || null,
       comments: props.comments || null,
     };
-    console.log(this.state.user);
+    console.log(this.state.comments);
   }
 
   async componentDidMount() {
