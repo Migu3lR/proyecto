@@ -41,7 +41,7 @@ module.exports = {
   },
   target: 'web',
   resolve: {
-    extensions: ['', 'js', 'jsx'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   plugins: [
     new ExtractTextPlugin({ filename: '../statics/styles.css' }),
