@@ -30,6 +30,8 @@ class Post extends Component {
       !this.state.comments ? api.posts.getComments(this.props.id) : Promise.resolve(null),
     ]);
 
+    console.log(user);
+
     return this.setState({
       loading: false,
       user: user || this.state.user,
