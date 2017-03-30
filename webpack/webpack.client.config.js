@@ -40,6 +40,9 @@ module.exports = {
     ],
   },
   target: 'web',
+  resolve: {
+    extensions: ['', 'js', 'jsx'],
+  },
   plugins: [
     new ExtractTextPlugin({ filename: '../statics/styles.css' }),
   ],
