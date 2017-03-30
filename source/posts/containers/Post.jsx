@@ -16,8 +16,7 @@ class Post extends Component {
   }
 
   async componentDidMount() {
-    const a = this.initialFetch();
-    console.log(a);
+    this.initialFetch();
   }
 
   async initialFetch() {
