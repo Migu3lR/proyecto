@@ -83,7 +83,7 @@ Post.defaultProps = {
   userId: -1,
   title: '',
   body: '',
-  user: {},
+  user: null,
   comments: [],
 };
 
