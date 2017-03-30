@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Post from '../../posts/containers/Post';
 
 import api from '../../api';
@@ -78,5 +78,15 @@ class Profile extends Component {
     );
   }
 }
+
+Profile.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.object,
+  }),
+};
+
+Profile.defaultProps = {
+  match: {},
+};
 
 export default Profile;
