@@ -9,6 +9,13 @@ module.exports = {
     path: path.resolve(__dirname, '../built/statics'),
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        use: 'eslint',
+      },
+    ],
+
     loaders: [
       {
         test: /\.json$/,
@@ -23,19 +30,19 @@ module.exports = {
               presets: ['es2016', 'es2017', 'react'],
               plugins: ['babel-plugin-transform-es2015-modules-commonjs'],
             },
-          }
+          },
         ],
-        exclude: /(node_modules)/
+        exclude: /(node_modules)/,
       },
       {
         test: /\.css?$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules' })
-      }
-    ]
+        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules' }),
+      },
+    ],
   },
   target: 'web',
   plugins: [
     new ExtractTextPlugin({ filename: '../statics/styles.css' }),
-  ]
+  ],
 };

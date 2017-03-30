@@ -9,6 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, '../built/server'),
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        use: 'eslint',
+      },
+    ],
     loaders: [
       {
         test: /\.json$/,
