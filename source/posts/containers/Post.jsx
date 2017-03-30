@@ -72,6 +72,7 @@ Post.propTypes = {
   body: PropTypes.string,
   user: PropTypes.shape({
     name: PropTypes.string,
+    id: PropTypes.number,
   }),
   comments: PropTypes.arrayOf(
     PropTypes.object,
@@ -83,7 +84,7 @@ Post.defaultProps = {
   userId: -1,
   title: '',
   body: '',
-  user: null,
+  user: {},
   comments: [],
 };
 
