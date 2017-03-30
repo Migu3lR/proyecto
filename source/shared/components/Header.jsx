@@ -6,7 +6,7 @@ import styles from './Header.css';
 function Header() {
     return (
         <header className={styles.header}>
-            <h1 className={style.title}>
+            <h1 className={styles.title}>
                 Miprimera app cpon react
             </h1>
 
