@@ -40,7 +40,7 @@ module.exports = {
   },
   target: 'node',
   resolve: {
-    extensions: ['', '.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   plugins: [
     new ExtractTextPlugin({ filename: '../statics/styles.css' }),
