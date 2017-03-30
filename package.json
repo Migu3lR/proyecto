@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bff": "node ./built/server/index.js",
+    "bff": "nodemon ./built/server/index.js",
     "sfs": "serve ./built/statics/ --port 3002 --cache 0",
     "postreceive": "git pull"
   },
@@ -26,6 +26,7 @@
     "babel-preset-latest-minimal": "^1.1.2",
     "babel-preset-react": "^6.23.0",
     "css-loader": "^0.27.3",
+    "eslint": "^3.18.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "husky": "^0.13.3",
     "json-loader": "^0.5.4",
