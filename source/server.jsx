@@ -1,27 +1,27 @@
 import http from 'http';
 import React from 'react';
-import { renderToString, renderToStaticMarkup }  from 'react-dom/server';
+import { renderToString, renderToStaticMarkup } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 
 
-import Pages from './pages/containers/Page.jsx';
-import Layout from './pages/components/Layout.jsx';
+import Pages from './pages/containers/Page';
+import Layout from './pages/components/Layout';
 
-function requestHandler(request, response){
+function requestHandler(request, response) {
   const context = {};
 
 
 
-  let html = renderToString(
-        <StaticRouter location={request.url} context={context}>
-          <Pages />
-        </StaticRouter>
+  const html = renderToString(
+    <StaticRouter location={request.url} context={context}>
+      <Pages />
+    </StaticRouter>,
   );
 
 
   response.setHeader('Content-Type', 'text/html');
 
-  if(context.url){
+  if (context.url) {
     response.writeHead(301, {
       Location: context.url,
     });
@@ -33,11 +33,10 @@ function requestHandler(request, response){
       <Layout
         title="Aplicacion"
         content={html}
-      />
-    )
+      />,
+    ),
   );
   response.end();
-
 }
 
 

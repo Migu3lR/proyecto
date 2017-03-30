@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-fetch'
+import fetch from 'isomorphic-fetch';
 
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
@@ -11,13 +11,13 @@ const api = {
       return data;
     },
 
-    async getSingle(id = 1){
+    async getSingle(id = 1) {
       const response = await fetch(`${baseUrl}/posts/${id}`);
-      const data= await response.json();
+      const data = await response.json();
 
       return data;
     },
-    async getComments(id = 1){
+    async getComments(id = 1) {
       const response = await fetch(`${baseUrl}/posts/${id}/comments`);
       const data = await response.json();
 
@@ -31,14 +31,14 @@ const api = {
 
       return data;
     },
-    async getPosts(id = 1){
+    async getPosts(id = 1) {
       const response = await fetch(`${baseUrl}/posts/?userId=${id}`);
       const data = await response.json();
 
       return data;
-    }
-  }
+    },
+  },
 
-}
+};
 
 export default api;

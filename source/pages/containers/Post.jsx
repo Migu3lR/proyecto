@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component, PropTypes } from 'react';
 
-import PostBody from '../../posts/containers/Post.jsx';
-import Comment from '../../comments/containers/Comment.jsx';
-import Loading from '../../shared/components/Loading.jsx';
+import PostBody from '../../posts/containers/Post';
+import Comment from '../../comments/containers/Comment';
+import Loading from '../../shared/components/Loading';
 
-import api from '../../api.jsx';
+import api from '../../api';
 
 class Post extends Component {
   constructor(props) {
@@ -16,8 +15,7 @@ class Post extends Component {
       user: {},
       post: {},
       comments: [],
-    }
-
+    };
   }
 
 
@@ -71,5 +69,13 @@ class Post extends Component {
     );
   }
 }
+
+Post.PropTypes = {
+  match: match.params.PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.number,
+    }),
+  }),
+};
 
 export default Post;

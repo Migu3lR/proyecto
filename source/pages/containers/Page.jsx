@@ -2,19 +2,18 @@ import React from 'react';
 import {
   Route,
   Switch,
-  Link
 } from 'react-router-dom';
 
-import Home from './Home.jsx';
-import Post from './Post.jsx';
-import Profile from './Profile.jsx';
-import Error404 from './Error404.jsx';
+import Home from './Home';
+import Post from './Post';
+import Profile from './Profile';
+import Error404 from './Error404';
 
-import Header from '../../shared/components/Header.jsx';
+import Header from '../../shared/components/Header';
 
 function Pages() {
   return (
-    <main role="applitacion">
+    <main role="application">
       <Header />
 
       <Switch>
