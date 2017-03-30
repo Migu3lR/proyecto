@@ -11,7 +11,6 @@ function requestHandler(request, response) {
   const context = {};
 
 
-
   const html = renderToString(
     <StaticRouter location={request.url} context={context}>
       <Pages />
@@ -38,7 +37,6 @@ function requestHandler(request, response) {
   );
   response.end();
 }
-
 
 
 const server = http.createServer(requestHandler);
