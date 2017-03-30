@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 function Layout(props) {
   return (
-    <html>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <title>{props.title}</title>
@@ -23,7 +23,19 @@ function Layout(props) {
         <script src="http://138.68.131.182:3002/app.js" />
       </body>
     </html>
-  )
+  );
 }
+
+Layout.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+};
+
+Layout.defaultProps = {
+  title: '',
+  content: '',
+};
+
+
 
 export default Layout;

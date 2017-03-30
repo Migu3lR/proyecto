@@ -20,6 +20,10 @@ class Post extends Component {
 
 
   async componentDidMount() {
+    this.initialFetch();
+  }
+
+  async initialFetch() {
     const [
       post,
       comments,
@@ -36,8 +40,6 @@ class Post extends Component {
       user,
       comments,
     });
-
-
   }
 
 
@@ -71,7 +73,7 @@ class Post extends Component {
 }
 
 Post.PropTypes = {
-  match: match.params.PropTypes.shape({
+  match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.number,
     }),

@@ -1,24 +1,26 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import Post from '../../posts/containers/Post';
 
-import Post from '../../posts/containers/Post.jsx'
+import api from '../../api';
 
-import api from '../../api.jsx';
-
-import Loading from '../../shared/components/Loading.jsx'
+import Loading from '../../shared/components/Loading';
 
 class Profile extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
       user: {},
       posts: [],
       loading: true,
-    }
+    };
   }
 
-  async componentDidMount(){
+  async componentDidMount() {
+    this.initialFetch();
+  }
+
+  async initialFetch() {
     const [
       user,
       posts,
@@ -30,16 +32,16 @@ class Profile extends Component {
     this.setState({
       user,
       posts,
-      loading:false,
+      loading: false,
     });
   }
 
   render() {
-    if (this.state.loading){
-      return <Loading />
-    } 
+    if (this.state.loading) {
+      return <Loading />;
+    }
 
-    return(
+    return (
       <section name="profile">
         <h2> Profile of {this.state.user.name} </h2>
         <fieldset>
@@ -62,13 +64,13 @@ class Profile extends Component {
         <section>
           {this.state.posts
             .map(post => (
-                  <Post 
-                    key={post.id} 
-                    user={this.state.user}
-                    {...post} 
-                  />
-                  )
-                )
+              <Post
+                key={post.id}
+                user={this.state.user}
+                {...post}
+              />
+            ),
+          )
           }
         </section>
 
