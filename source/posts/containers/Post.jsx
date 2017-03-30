@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../api.jsx';
+import api from '../../api';
 
 import styles from './Post.css';
 
@@ -56,7 +56,7 @@ class Post extends Component {
 
         )}
       </article>
-    )
+    );
   }
 }
 
@@ -65,6 +65,6 @@ Post.propTypes = {
   userId: PropTypes.number,
   title: PropTypes.string,
   body: PropTypes.string,
-}
+};
 export default Post;
 
