@@ -7,12 +7,13 @@ import styles from './Post.css';
 class Post extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+
     this.state = {
       loading: true,
       user: props.user || null,
       comments: props.comments || null,
     };
+    console.log(this.state.user);
   }
 
   async componentDidMount() {
