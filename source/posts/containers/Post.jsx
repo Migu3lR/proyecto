@@ -85,7 +85,7 @@ Post.defaultProps = {
   title: '',
   body: '',
   user: {},
-  comments: [],
+  comments: [{}],
 };
 
 export default Post;
