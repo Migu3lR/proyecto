@@ -1,0 +1,190 @@
+
+> proyecto@1.0.0 bff /home/migu3lr/proyecto
+> nodemon ./built/server/index.js
+
+[33m[nodemon] 1.11.0[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./built/server/index.js`[39m
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+
+npm ERR! Linux 3.16.0-4-amd64
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "bff"
+npm ERR! node v6.10.0
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! proyecto@1.0.0 bff: `nodemon ./built/server/index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the proyecto@1.0.0 bff script 'nodemon ./built/server/index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the proyecto package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nodemon ./built/server/index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs proyecto
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls proyecto
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/migu3lr/proyecto/npm-debug.log
+
+> proyecto@1.0.0 bff /home/migu3lr/proyecto
+> nodemon ./built/server/index.js
+
+[33m[nodemon] 1.11.0[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node ./built/server/index.js`[39m
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: EBADF: bad file descriptor, read
+    at Error (native)
+
+npm ERR! Linux 3.16.0-4-amd64
+npm ERR! argv "/usr/bin/nodejs" "/usr/bin/npm" "run" "bff"
+npm ERR! node v6.10.0
+npm ERR! npm  v3.10.10
+npm ERR! code ELIFECYCLE
+npm ERR! proyecto@1.0.0 bff: `nodemon ./built/server/index.js`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the proyecto@1.0.0 bff script 'nodemon ./built/server/index.js'.
+npm ERR! Make sure you have the latest version of node.js and npm installed.
+npm ERR! If you do, this is most likely a problem with the proyecto package,
+npm ERR! not with npm itself.
+npm ERR! Tell the author that this fails on your system:
+npm ERR!     nodemon ./built/server/index.js
+npm ERR! You can get information on how to open an issue for this project with:
+npm ERR!     npm bugs proyecto
+npm ERR! Or if that isn't available, you can get their info via:
+npm ERR!     npm owner ls proyecto
+npm ERR! There is likely additional logging output above.
+
+npm ERR! Please include the following file with any support request:
+npm ERR!     /home/migu3lr/proyecto/npm-debug.log
+
+Webpack is watching the files…
+
+(node:22992) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
+parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
+Hash: 56b153f539ea3011ed3f36a31dfbcbce0ffdcca4
+Version: webpack 2.3.2
+Child
+    Hash: 56b153f539ea3011ed3f
+    Time: 14233ms
+                    Asset     Size  Chunks                    Chunk Names
+                 index.js  1.04 MB       0  [emitted]  [big]  main
+    ../statics/styles.css  2.16 kB       0  [emitted]         main
+       [3] ./~/react/react.js 56 bytes {0} [built]
+      [18] ./~/react/lib/React.js 2.69 kB {0} [built]
+      [19] ./~/react-router-dom/es/index.js 925 bytes {0} [built]
+      [96] ./~/react-router-dom/es/Link.js 3.8 kB {0} [built]
+     [103] ./source/pages/containers/Page.jsx 1.56 kB {0} [built]
+     [104] ./~/react-dom/server.js 65 bytes {0} [built]
+     [109] ./source/pages/containers/Profile.jsx 3.67 kB {0} [built]
+     [110] ./source/server.jsx 1.26 kB {0} [built]
+     [180] ./~/react-dom/lib/ReactDOMServer.js 735 bytes {0} [built]
+     [227] ./~/react-router-dom/es/BrowserRouter.js 2.1 kB {0} [built]
+     [232] ./~/react-router-dom/es/Redirect.js 51 bytes {0} [built]
+     [233] ./~/react-router-dom/es/Route.js 48 bytes {0} [built]
+     [234] ./~/react-router-dom/es/Router.js 49 bytes {0} [built]
+     [235] ./~/react-router-dom/es/StaticRouter.js 55 bytes {0} [built]
+     [236] ./~/react-router-dom/es/Switch.js 49 bytes {0} [built]
+        + 253 hidden modules
+    
+    WARNING in ./source/pages/components/Layout.jsx
+    (Emitted value instead of an instance of Error) 
+    /home/migu3lr/proyecto/source/pages/components/Layout.jsx
+      19:11  warning  Dangerous property 'dangerouslySetInnerHTML' found  react/no-danger
+    
+    ✖ 1 problem (0 errors, 1 warning)
+    
+     @ ./source/server.jsx 19:14-50
+    
+    WARNING in ./source/pages/containers/Home.jsx
+    (Emitted value instead of an instance of Error) 
+    /home/migu3lr/proyecto/source/pages/containers/Home.jsx
+      64:9  warning  Unexpected console statement  no-console
+    
+    ✖ 1 problem (0 errors, 1 warning)
+    
+     @ ./source/pages/containers/Page.jsx 13:12-29
+     @ ./source/server.jsx
+    
+    WARNING in ./~/encoding/lib/iconv-loader.js
+    9:12-34 Critical dependency: the request of a dependency is an expression
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+            + 1 hidden modules
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+           [1] ./~/css-loader?modules!./source/posts/containers/Post.css 866 bytes {0} [built]
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+           [1] ./~/css-loader?modules!./source/pages/containers/Page.css 1.38 kB {0} [built]
+Child
+    Hash: 36a31dfbcbce0ffdcca4
+    Time: 13243ms
+                    Asset     Size  Chunks                    Chunk Names
+                   app.js   874 kB       0  [emitted]  [big]  main
+    ../statics/styles.css  2.16 kB       0  [emitted]         main
+       [4] ./~/react/react.js 56 bytes {0} [built]
+      [22] ./~/react/lib/React.js 2.69 kB {0} [built]
+      [23] ./~/react-router-dom/es/index.js 925 bytes {0} [built]
+      [95] ./source/pages/containers/Page.jsx 1.56 kB {0} [built]
+      [96] ./~/react-dom/index.js 59 bytes {0} [built]
+      [97] ./source/client.jsx 569 bytes {0} [built]
+      [99] ./source/pages/containers/Error404.jsx 645 bytes {0} [built]
+     [198] ./~/react-router-dom/es/BrowserRouter.js 2.1 kB {0} [built]
+     [202] ./~/react-router-dom/es/Prompt.js 49 bytes {0} [built]
+     [203] ./~/react-router-dom/es/Redirect.js 51 bytes {0} [built]
+     [204] ./~/react-router-dom/es/Route.js 48 bytes {0} [built]
+     [205] ./~/react-router-dom/es/Router.js 49 bytes {0} [built]
+     [206] ./~/react-router-dom/es/StaticRouter.js 55 bytes {0} [built]
+     [207] ./~/react-router-dom/es/Switch.js 49 bytes {0} [built]
+     [208] ./~/react-router-dom/es/matchPath.js 52 bytes {0} [built]
+        + 226 hidden modules
+    
+    WARNING in ./source/pages/containers/Home.jsx
+    (Emitted value instead of an instance of Error) 
+    /home/migu3lr/proyecto/source/pages/containers/Home.jsx
+      64:9  warning  Unexpected console statement  no-console
+    
+    ✖ 1 problem (0 errors, 1 warning)
+    
+     @ ./source/pages/containers/Page.jsx 13:12-29
+     @ ./source/client.jsx
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+           [1] ./~/base64-js/index.js 3.48 kB {0} [built]
+           [2] ./~/buffer/index.js 48.6 kB {0} [built]
+           [4] ./~/ieee754/index.js 2.05 kB {0} [built]
+           [5] ./~/isarray/index.js 132 bytes {0} [built]
+           [6] (webpack)/buildin/global.js 488 bytes {0} [built]
+            + 1 hidden modules
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+           [1] ./~/base64-js/index.js 3.48 kB {0} [built]
+           [2] ./~/buffer/index.js 48.6 kB {0} [built]
+           [3] ./~/css-loader?modules!./source/posts/containers/Post.css 866 bytes {0} [built]
+           [4] ./~/ieee754/index.js 2.05 kB {0} [built]
+           [5] ./~/isarray/index.js 132 bytes {0} [built]
+           [6] (webpack)/buildin/global.js 488 bytes {0} [built]
+    Child extract-text-webpack-plugin:
+           [0] ./~/css-loader/lib/css-base.js 2.19 kB {0} [built]
+           [1] ./~/base64-js/index.js 3.48 kB {0} [built]
+           [2] ./~/buffer/index.js 48.6 kB {0} [built]
+           [3] ./~/css-loader?modules!./source/pages/containers/Page.css 1.38 kB {0} [built]
+           [4] ./~/ieee754/index.js 2.05 kB {0} [built]
+           [5] ./~/isarray/index.js 132 bytes {0} [built]
+           [6] (webpack)/buildin/global.js 488 bytes {0} [built]
