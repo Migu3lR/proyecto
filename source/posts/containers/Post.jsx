@@ -16,7 +16,8 @@ class Post extends Component {
   }
 
   async componentDidMount() {
-    this.initialFetch();
+    const a = this.initialFetch();
+    console.log(a);
   }
 
   async initialFetch() {
@@ -29,8 +30,6 @@ class Post extends Component {
       !this.state.user ? api.users.getSingle(this.props.userId) : Promise.resolve(null),
       !this.state.comments ? api.posts.getComments(this.props.id) : Promise.resolve(null),
     ]);
-
-    console.log(user);
 
     return this.setState({
       loading: false,
