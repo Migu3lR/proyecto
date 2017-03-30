@@ -7,6 +7,8 @@ import Header from '../../shared/components/Header.jsx';
 
 import api from '../../api.jsx';
 
+import styles from './Page.css'
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -68,11 +70,11 @@ class Home extends Component {
 
   render() {
     return (
-      <section name="Home">
+      <section name="Home" className={styles.section}>
         <Header />
         <h1> Home </h1>
 
-        <section>
+        <section className={styles.list}>
           {this.state.loading && (
             <Loading />
           )}
