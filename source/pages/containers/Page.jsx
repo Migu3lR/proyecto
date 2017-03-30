@@ -10,16 +10,20 @@ import Post from './Post.jsx';
 import Profile from './Profile.jsx';
 import Error404 from './Error404.jsx';
 
+import Header from '../../shared/components/Header.jsx';
+
 function Pages() {
-  return(
+  return (
     <main role="applitacion">
+      <Header />
+
       <Switch>
         <Route
           path="/"
           exact
           component={Home}
         />
-        
+
         <Route
           path="/post/:id"
           exact
