@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -9,13 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, '../built/server'),
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        use: 'eslint',
-      },
-    ],
     loaders: [
+      {
+        test: /\.jsx$/,
+        use: 'eslint-loader',
+        enforce: 'pre',
+      },
       {
         test: /\.json$/,
         use: 'json-loader',
@@ -26,21 +25,21 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['latest-minimal', 'react']
+              presets: ['latest-minimal', 'react'],
             },
-          }
+          },
         ],
-        exclude: /(node_modules)/
+        exclude: /(node_modules)/,
       },
       {
         test: /\.css?$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules' })
-      }
-    ]
+        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader?modules' }),
+      },
+    ],
   },
   target: 'node',
   plugins: [
-    new ExtractTextPlugin({ filename: '../statics/styles.css' })
-  ]
+    new ExtractTextPlugin({ filename: '../statics/styles.css' }),
+  ],
 };

@@ -1,4 +1,4 @@
-var path = require('path');
+const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -9,14 +9,12 @@ module.exports = {
     path: path.resolve(__dirname, '../built/statics'),
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        use: 'eslint',
-      },
-    ],
-
     loaders: [
+      {
+        test: /\.jsx$/,
+        use: 'eslint-loader',
+        enforce: 'pre',
+      },
       {
         test: /\.json$/,
         use: 'json-loader',
