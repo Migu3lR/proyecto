@@ -9,7 +9,7 @@ function Comment(props) {
       <div className={styles.meta}>
         <FormattedHTMLMessage
           id="comment.meta.author"
-          vales={{
+          values={{
             email: props.email,
             name: props.name,
           }}
