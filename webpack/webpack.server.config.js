@@ -1,12 +1,14 @@
 const path = require('path');
 
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: './source/server.jsx',
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, '../built/server'),
+    publicPath: process.env.NODE_ENV === 'production' ? 'https://platzi-react-sfs.now.sh' : 'http://138.68.131.182:3002',
   },
   module: {
     loaders: [
@@ -26,6 +28,15 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['latest-minimal', 'react'],
+              env: {
+                productions: {
+                  plugins: ['transform-regenerator', 'transform-runtime'],
+                  presets: ['es2015'],
+                },
+                development: {
+                  presents: ['latest-minimal'],
+                },
+              },
             },
           },
         ],
@@ -40,9 +51,31 @@ module.exports = {
   },
   target: 'node',
   resolve: {
-    extensions: ['.js', '.jsx', '.css'],
+    extensions: ['.js', '.jsx', '.css', '.json'],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
+      },
+    }),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
     new ExtractTextPlugin({ filename: '../statics/styles.css' }),
   ],
 };
+
+if (process.env.NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      mangle: {
+        except: ['$super', '$', 'exports', 'require'],
+      },
+    }),
+  );
+}
+
+module.exports = config;
