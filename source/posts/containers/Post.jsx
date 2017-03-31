@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../api';
 import { FormattedMessage } from 'react-intl';
+
+import api from '../../api';
 
 import styles from './Post.css';
 
