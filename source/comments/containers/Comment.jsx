@@ -8,7 +8,7 @@ function Comment(props) {
     <article id={`comment-${props.id}`} className={styles.comment}>
       <div className={styles.meta}>
         <FormattedHTMLMessage
-          id="comment.meta.authors"
+          id="comment.meta.author"
           vales={{
             email: props.email,
             name: props.name,
