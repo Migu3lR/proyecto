@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import styles from './Comment.css';
 
@@ -7,7 +7,7 @@ function Comment(props) {
   return (
     <article id={`comment-${props.id}`} className={styles.comment}>
       <div className={styles.meta}>
-        <FormattedMessage
+        <FormattedHTMLMessage
           id="comment.meta.authors"
           vales={{
             email: props.email,
