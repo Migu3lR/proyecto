@@ -6,6 +6,8 @@ import Loading from '../../shared/components/Loading';
 
 import api from '../../api';
 
+import styles from './Page.css';
+
 class Post extends Component {
   constructor(props) {
     super(props);
@@ -49,24 +51,21 @@ class Post extends Component {
     }
 
     return (
-      <section name="post">
-
-        <PostBody
-          {...this.state.post}
-          user={this.state.user}
-          comments={this.state.comments}
-        />
-        <section>
+      <section name="post" className={styles.section}>
+        <section className={styles.main}>
+          <PostBody
+            {...this.state.post}
+            user={this.state.user}
+            comments={this.state.comments}
+          />
+        </section>
+        <section className={styles.list}>
           {this.state.comments
             .map(comment => (
-              <Comment
-                key={comment.id}
-                {...comment}
-              />
+              <Comment key={comment.id} {...comment} />
             ))
           }
         </section>
-
       </section>
     );
   }
