@@ -1,11 +1,11 @@
 import React from 'react';
-
+import { FormattedMessage } from 'react-intl';
 
 function Loading() {
   return (
     <h3>
-      Loadings data...
-      </h3>
+      <FormattedMessage id="loading" />
+    </h3>
   );
 }
 
