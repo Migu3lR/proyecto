@@ -1,7 +1,15 @@
 const path = require('path');
 
+const fs = require('fs');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const nodeModules = fs
+  .readdirSync('node_modules')
+  .filter(x => ['.bin'].indexOf(x) === -1)
+  .reduce(
+  (modules, module) => Object.assing(modules, { [module]: `commonjs ${module}` }), {}
+  );
 
 const config = {
   entry: './source/server.jsx',
@@ -53,6 +61,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.css', '.json'],
   },
+  externals: nodeModules,
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
