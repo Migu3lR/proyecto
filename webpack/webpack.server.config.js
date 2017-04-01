@@ -8,7 +8,7 @@ const nodeModules = fs
   .readdirSync('node_modules')
   .filter(x => ['.bin'].indexOf(x) === -1)
   .reduce(
-  (modules, module) => Object.assing(modules, { [module]: `commonjs ${module}` }), {}
+  (modules, module) => Object.assign(modules, { [module]: `commonjs ${module}` }), {}
   );
 
 const config = {
