@@ -75,7 +75,7 @@ if (process.env.NODE_ENV === 'production') {
       mangle: {
         except: ['$super', '$', 'exports', 'require'],
       },
-    }),
+    })
   );
 }
 
