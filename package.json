@@ -7,8 +7,8 @@
     "build": "NODE_ENV=production webpack -p",
     "bff": "nodemon ./built/server/index.js",
     "deploy": "now",
-    "deploy:sfs": "",
-    "start": "npm run bff",
+    "deploy:sfs": "now ./built/statics/",
+    "start": "node ./built/server/index.js",
     "sfs": "serve ./built/statics/ --port 3002 --cache 0",
     "watch": "webpack -w"
   },
