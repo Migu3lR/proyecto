@@ -2,7 +2,7 @@
   "name": "proyecto",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./built/server/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "bff": "nodemon ./built/server/index.js",
