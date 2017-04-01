@@ -8,6 +8,7 @@
     "bff": "nodemon ./built/server/index.js",
     "deploy": "now",
     "deploy:sfs": "",
+    "start": "npm run bff",
     "sfs": "serve ./built/statics/ --port 3002 --cache 0",
     "watch": "webpack -w"
   },
