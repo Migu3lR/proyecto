@@ -29,7 +29,7 @@ const config = {
             options: {
               presets: ['latest-minimal', 'react'],
               env: {
-                productions: {
+                production: {
                   plugins: ['transform-regenerator', 'transform-runtime'],
                   presets: ['es2015'],
                 },
