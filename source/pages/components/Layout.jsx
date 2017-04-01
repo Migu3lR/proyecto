@@ -29,11 +29,13 @@ function Layout(props) {
 Layout.propTypes = {
   title: PropTypes.string,
   content: PropTypes.string,
+  domain: PropTypes.string,
 };
 
 Layout.defaultProps = {
   title: '',
   content: '',
+  domain: '',
 };
 
 
