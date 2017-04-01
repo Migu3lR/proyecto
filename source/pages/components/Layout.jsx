@@ -11,7 +11,7 @@ function Layout(props) {
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css" />
-        <link rel="stylesheet" href="http://138.68.131.182:3002/styles.css" />
+        <link rel="stylesheet" href={`${props.domain}/styles.css`} />
       </head>
       <body>
         <div
@@ -20,7 +20,7 @@ function Layout(props) {
             __html: props.content,
           }}
         />
-        <script src="http://138.68.131.182:3002/app.js" />
+        <script src={`${props.domain}/app.js`} />
       </body>
     </html>
   );

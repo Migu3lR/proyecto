@@ -9,6 +9,8 @@ import messages from './messages.json';
 import Pages from './pages/containers/Page';
 import Layout from './pages/components/Layout';
 
+const domain = process.env.NODE_ENV === 'production' ? 'https://proyecto-react-sfs.now.sh' : 'http://138.68.131.182:3002';
+
 function requestHandler(request, response) {
   const locale = request.headers['accept-language'].indexOf('es') >= 0 ? 'es' : 'en';
 
@@ -36,6 +38,7 @@ function requestHandler(request, response) {
       <Layout
         title="Aplicacion"
         content={html}
+        domain={domain}
       />,
     ),
   );
